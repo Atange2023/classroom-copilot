@@ -1,0 +1,4 @@
+interface:
+  display_name: "课堂 Copilot"
+  short_description: "课堂并行学习、提问、可视化、课程笔记与课后复盘支持"
+  default_prompt: "使用 $classroom-copilot 启动课堂伴学，先询问课程名称并建立本节课记录。"
