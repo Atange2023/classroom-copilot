@@ -5,9 +5,14 @@ Copy only the start-time file contents below into a new session directory. Repla
 ## `_state.md` — required
 
 ```text
+schema_version: 2
 session_id: <YYYY-MM-DD-course-slug-session-slug>
 course: <课程名称>
 state: in-class
+learning_mode: classroom
+source_count: 0
+active_goal_id: none
+active_practice_id: none
 note_count: 0
 question_count: 0
 concept_count: 0
@@ -21,6 +26,8 @@ files:
   concepts: concepts.md
   review: review.md
   mindmap: mindmap.md
+  sources: sources.md
+  practice: practice.md
 pending_entries: {}
 writer_lease: none
 legacy_pending_entry_id:
@@ -59,6 +66,8 @@ updated_at: <ISO 8601 time or unknown>
 - session_id: <session id>
 - generated_at: <ISO 8601 time or unknown>
 - source_notes: []
+- coverage: <actual coverage at close>
+- source_scope: <readable sections/pages or unknown>
 
 ## Key ideas
 
@@ -94,6 +103,7 @@ updated_at: <ISO 8601 time or unknown>
 
 - session_id: <session id>
 - status: editable draft
+- coverage: <actual coverage at close>
 - source_entries: []
 
 ## Editable outline
@@ -159,3 +169,7 @@ Create the empty directory at session start. Use the `visuals/*.md` schema in `r
 
 - <gap or question>
 ```
+
+## 2.0 on-demand files
+
+The state mapping names sources.md and practice.md but does not create them at start. Use references/file-formats.md when first registering S entries or selecting P training. Course-parent learning-profile.md and learning-ledger.md are created only for goal setup/training; an ordinary capture must not wait for goal configuration. Never copy unfilled placeholders into learner artifacts.
